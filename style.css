@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: rgb(7, 182, 7);
+    overflow: hidden;
+}
+
+.campo-comecar {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comecar {
+    border: 3px solid green;
+    border-radius: 20px;
+    height: 70vh;
+    min-height: 500px;
+    width: 30%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comecar button {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: green;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.comecar img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.comecar h1 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.fim {
+    margin-top: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fim h1 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.fim button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.nuvens {
+    position: absolute;
+    width: 650px;
+    right: -650px;
+}
+
+.campo-jogo {
+    height: 80vh;
+    max-height: 1000px;
+    border-bottom: 10px solid green;
+    background: linear-gradient(rgb(54, 192, 247), rgb(185, 224, 247));
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0px;
+}
+
+.tubo {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    left: none;
+}
+
+.pontos-jogo {
+    margin: 10px;
+}
+
+.pontos {
+    display: inline;
+}
+
+.movimentoTubo {
+    animation: tubo infinite linear;
+    animation-duration: 1.5s;
+}
+
+.movimentoNuvens {
+    animation: nuvens 7s linear infinite;
+}
+
+.pular {
+    animation: pulo 450ms;
+}
+
+.texto-creditos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.creditos {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.creditos p {
+    color: green;
+}
+
+.creditos h1 {
+    font-size: 4em;
+    margin-top: 10px;
+}
+
+.fade {
+    animation: fade 3s ease-in-out;
+}
+
+@keyframes nuvens {
+    from {
+        right: -650px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes tubo {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pulo {
+    0% {
+        bottom: 0px;
+    }
+    
+    40% {
+        bottom: 160px;
+    }
+
+    50% {
+        bottom: 160px;
+    }
+
+    
+    60% {
+        bottom: 160px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
